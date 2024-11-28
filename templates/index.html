@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeConnect</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="bg-image">
+        <div class="transparent">
+    <div class="container">
+        <h1>Emergency Alert System</h1>
+
+        <!-- Current Emergency Contact -->
+        <p>Current Emergency Contact: <strong>{{ current_contact }}</strong></p>
+        <p style="margin-bottom: 30px;">Your Contact: <strong>{{ your_contact }}</strong></p>
+
+        <!-- Form to Update Emergency Contact -->
+        <form method="POST" action="/">
+            <label for="unsafe_number">Enter Your Contact:</label>
+            <input type="text" id="unsafe_number" name="unsafe_number" placeholder="+1234567890" >
+            <label for="emergency_number">Update Emergency Contact:</label>
+            <input type="text" id="emergency_number" name="emergency_number" placeholder="+1234567890" >
+            <button type="submit" name="update_contact">Update Contact</button>
+        </form>
+
+        <!-- Unsafe Button to Trigger Alerts -->
+        <form method="POST" action="/">
+            <button type="submit" class="alert-button" name="trigger_alert">Unsafe</button>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
